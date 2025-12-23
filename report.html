@@ -18,9 +18,10 @@
 
             <ul>
 
-                <li><div class="home"><a class="active" href="home.html">Home</a></div></li>
-            <li><div class="yourreports"><a  href="yourreports.html">your reports</a></li>
-            <li><a href="#your projects">about</a></li>
+                <li class="active"><div  class="home">Home</div></li>
+            <li><div class="yourreports">your reports</li>
+            <img id="notiimg" src="Screenshot 2025-12-14 152025.png" alt="">
+           
             
             
         </ul>
@@ -36,22 +37,27 @@
             <p  id="reportyourlostitem" >Report Lost or Found Item</p>
 
             <label for="item-name">Item Name</label>
-            <input type="text" placeholder="Enter Item name">
+            <input id="nameinput" type="text" placeholder="Enter Item name">
+            <p class="error-msg">Please enter the item name.</p>
 
             <label for="item-image">Item Image</label>
             
+        
             <div class="item-image">
-                 <input type="image" placeholder="+ add image">
+    <input type="file" id="imageInput" accept="image/*">
+    <img id="previewImage" style="display: none;" />
+</div>
 
-            </div>
+
 
             <label for="campus">Which Campus ?</label>
 
             
-                <div id="campusopt">
+                <div class="campusopt">
                     
                 <div class="options"><input type="radio" class="option" name="selection">
-                <label for="option1">Bibwewadi campus</label></div>
+                <label for="option1">Bibwewadi campus</label>
+                </div>
                 
 
                 <div class="options"> <input type="radio" class="option" name="selection">
@@ -60,30 +66,39 @@
                
 
                 </div>
+
+                <p class="error-msg campus-error">Please select a campus.</p>
             
 
             <label for="location">Location ( where do you lost or found it ?) </label>
-            <input type="text" placeholder="Where did you lose/find it?">
+            <input id="whereloc" type="text" placeholder="Where did you lose/find it?">
+            <p class="error-msg">Please enter the location where the item was lost.</p>
 
             <label for="description">Describe Your Item</label>
            <textarea placeholder="Describe" id="describeuserlostitem"></textarea>
+           <p class="error-msg">Please add a short description of the item.</p>
 
 
             <label for="contact">Your Name</label>
-           <input type="text"  placeholder="Enter Your Name">
+           <input id="contactname" type="text"  placeholder="Enter Your Name">
+           <p class="error-msg">Please enter your name.</p>
 
            <label for="contact">Contact Details</label>
-           <input type="tel" placeholder="Enter phone number">
+           <input id="enterphone" type="tel" placeholder="Enter phone number">
+           <p class="error-msg">Please provide a contact number.</p>
+
+           <label>date</label>
+           <input type="date" id="lostDate" name="lostdate" required>
+            <p class="error-msg">Please select the date when the item was lost.</p>
 
            
-           
 
-           <button id="submit" type="submit">Submit Report</button>
+           <button id="submit" type="button">Submit Report</button>
         </div>
 
 
         
-        <p>✓ Your report has been published and is now visible to everyone.</p>
+        <p style="display: none;" id="submitmsg">✓ Your report has been published and is now visible to everyone.</p>
 
 
 
@@ -94,7 +109,8 @@
 
 
 
-
+<script type="module" src="Report.js"></script>
+<script type="module" src="nav.js"></script>
     
 </body>
 </html>

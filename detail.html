@@ -18,9 +18,9 @@
 
             <ul>
 
-                <li><div class="home"><a class="active" href="home.html">Home</a></div></li>
-           <li><div class="yourreports"><a  href="yourreports.html">your reports</a></li>
-            <li><a href="#your projects">about</a></li>
+                <li class="active"><div class="home ">Home</div></li>
+            <li><div class="yourreports">your reports</li>
+            <img id="notiimg" src="Screenshot 2025-12-14 152025.png" alt="">
             
             
         </ul>
@@ -31,10 +31,30 @@
   
   <!-- LEFT: Post Details -->
   <div class="post-details">
-   <div class="reportedimg"></div>
-    <label class="reportedimgname">Item Name</label>
-    <label class="reportimgdesc">Description about the item...</label>
+    <div class="reportedimg"> </div>
+    <div class="reportedimgname"> </div>
+    <label id="reporteddesc">Description</label>
+    <div class="reportedimgdesc"></div>
+    <label id="reportedname">Name </label>
+    <div class="reportedname"></div>
+    <label id="Contact">Contact</label>
+    <div class="reportedcontact"></div>
+    <label id="location">Location </label>
+    <div class="reportedloc"></div>
+
+    <div class="reportedcamdate">
+      <div class="reportedcamimg">
+        <img id="loc" src="locimg.png" alt="loc">
+        <div class="reportedcampus"> </div>
+      </div>
+       
+    <div class="reporteddate"></div>
+    </div>
+   
   </div>
+
+  
+
 
   <!-- RIGHT: Finder Form -->
   <div class="finder-form">
@@ -51,13 +71,16 @@
     <label>date</label>
     <input type="date" id="lostDate" name="lostDate" required>
 
-    <button>Found It!</button>
+    <button id="foundBtn">Found It!</button>
+    <p class="submmited">Details sent successfully!</p>
   </div>
 
 </div>
 
 
+    <script type="module" src="nav.js"></script>
+    <script type="module" src="Details.js"></script>
 
-    
+
 </body>
 </html>

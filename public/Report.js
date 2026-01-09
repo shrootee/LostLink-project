@@ -4,7 +4,7 @@ import {
   addDoc,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
+import { auth } from "./firebase.js";
 
 const imageInput = document.querySelector("#imageInput");
 const previewImage = document.querySelector("#previewImage");
@@ -20,6 +20,8 @@ const contactNameInput = document.querySelector("#contactname");
 const campusOptions = document.querySelectorAll('input[name="selection"]');
 
 allErrors.forEach(err => err.style.display = "none");
+
+
 
 
 imageInput.addEventListener("change", () => {
@@ -126,6 +128,7 @@ submitBtn.addEventListener("click", async () => {
       date: dateInput.value,
       location: locationInput.value,
       description: descriptionInput.value,
+      ownerId: auth.currentUser.uid,
       createdAt: serverTimestamp()
     });
 

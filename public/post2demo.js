@@ -21,15 +21,31 @@ async function loadPosts() {
       createPost(docSnap.id, docSnap.data());
     });
 
+//     if (docSnap.exists()) {
+//   const postData = docSnap.data();
+
+//   // UI fill (tumhara existing code)
+//   itemNameEl.textContent = postData.itemName;
+//   descEl.textContent = postData.description;
+
+//   // ✅ YE LINE ADD KARO
+//   postOwnerId = postData.userId;
+// }
+ 
   } catch (err) {
     console.error("Error loading posts:", err);
   }
 }
 
 function createPost(docId, data) {
+  const postId = docId;
+const ownerId = data.ownerId;
+
   const post = document.createElement("div");
   post.className = "post";
+  
     post.setAttribute("data-name", (data.itemName || "").toLowerCase());
+
   post.innerHTML = `
   <div class="pic">
     <img src="" alt="">
@@ -72,8 +88,12 @@ post.querySelector(".item-desc p").textContent =
 
 
   post.addEventListener("click", () => {
-    window.location.href = `detail.html?id=${docId}`;
-  });
+  window.location.href =
+    `detail.html?postId=${postId}&ownerId=${ownerId}`;
+});
+
+
+
 
   postsContainer.appendChild(post);
 }

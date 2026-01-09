@@ -7,8 +7,21 @@ import {
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
+// const params = new URLSearchParams(window.location.search);
+// const postId = params.get("id");
+
 const params = new URLSearchParams(window.location.search);
-const postId = params.get("id");
+const postId = params.get("postId");
+const ownerId = params.get("ownerId");
+
+
+
+
+
+
+// window.postOwnerId = null;
+
+
 
 async function loadPostDetails() {
   if (!postId) {
@@ -26,6 +39,14 @@ async function loadPostDetails() {
     }
 
     const data = docSnap.data();
+    window.postItemName = data.itemName;
+window.postImage = data.image;
+// document.getElementById("postItemName").value = data.itemName;
+// document.getElementById("postImage").value = data.image;
+
+
+    window.postOwnerId = data.ownerId;
+
 
     document.querySelector(".reportedimg").innerHTML =
       `<img src="${data.image || ""}" alt="">`;
@@ -59,47 +80,4 @@ async function loadPostDetails() {
 loadPostDetails();
 
 
-const foundBtn = document.getElementById("foundBtn");
 
-foundBtn.addEventListener("click", async () => {
-
-  const finderName =
-    document.querySelector(".finder-form input[placeholder='Enter your name']").value.trim();
-
-  const finderContact =
-    document.querySelector(".finder-form input[placeholder='Enter phone or email']").value.trim();
-
-  const finderMessage =
-    document.querySelector(".infooffinder").value.trim();
-
-  const foundDate =
-    document.getElementById("lostDate").value;
-
-    const submmited = document.querySelector(".submmited");
-
-  if (!finderName || !finderContact) {
-    alert("Please enter name and contact");
-    return;
-  }
-
-  try {
-    await addDoc(collection(db, "foundReports"), {
-      postId: postId,          
-      finderName: finderName,
-      finderContact: finderContact,
-      message: finderMessage,
-      date: foundDate,
-      createdAt: serverTimestamp()
-    });
-
-   
-    submmited.style.display="block";
-
-
-    // clear form
-    document.querySelector(".finder-form").reset?.();
-
-  } catch (error) {
-    console.error("Error saving found report:", error);
-  }
-});

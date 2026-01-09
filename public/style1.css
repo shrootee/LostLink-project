@@ -178,13 +178,13 @@ nav ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+  margin-right: 20px;
 }
 
 
 nav li {
-  margin: 0 20px;
+  margin: 0 60px;
 }
-
 
 nav li {
   color: white;
@@ -590,7 +590,17 @@ padding-top: 8px;
 }
 
 
-
+.error-msg {
+  background: rgba(255, 0, 0, 0.08);
+  color: #b00020;
+  padding: 2px 6px;
+  margin-top: -10px;
+  margin-bottom: 8px;
+  margin-left: 5px;
+  border-radius: 0px;
+  font-size: 14px;
+  display: none;
+}
 
 input:hover {
   border-color: #323232;
@@ -756,6 +766,16 @@ label{
     flex-direction: column;
 }
 
+#notifContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .page-title {
     
     font-size: 20px;
@@ -765,6 +785,15 @@ label{
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      color: #000;
 }
+
+.notiimg img {
+  width: 230px;
+    height: 230px;
+    background-color: #ccc;
+    
+  
+}
+
 
 .notif-card {
    
@@ -803,6 +832,20 @@ label{
     
 }
 
+/* .notiimg{
+    width: 230px;
+    height: 230px;
+    background-color: #ccc;
+    margin-bottom: 15px;
+    margin-top: -40px;
+    
+} */
+
+.notif-details{
+   display: flex;
+   justify-content: space-between;
+    
+}
 
 
 
@@ -814,54 +857,11 @@ label{
 }
 
 
-.actions {
-    margin-top: 25px;
-    display: flex;
-    gap: 12px;
+
+.submmited-msg{
+    font-size: 10px;
+    position: absolute;
+    bottom: 12px;
+    align-self: center;
+    margin-right: 8px;
 }
-
-.btn {
-    flex: 1;
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.primary {
-    background: #ffffff;
-     border: 1px solid rgb(49, 49, 49);
-   
-}
-
-.secondary {
-    background: rgb(30, 30, 30) ;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.primary:hover {
-    background: #d4d4d4;
-}
-
-.secondary:hover {
-    background: rgb(61, 61, 61);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

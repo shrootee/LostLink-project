@@ -6,16 +6,16 @@ const pluslogo = document.querySelector("#pluslogo");
 
 
 
-yourreports?.addEventListener("click", () => {
-  window.location.href = "yourreports.html";
-});
+// yourreports?.addEventListener("click", () => {
+//   window.location.href = "yourreports.html";
+// });
 
 notiimg?.addEventListener("click", () => {
-  window.location.href = "noti.html";
+  window.location.href = "./noti.html";
 });
 
 home?.addEventListener("click", () => {
-  window.location.href = "home.html";
+  window.location.href = "./home.html";
 });
 
 pluslogo?.addEventListener("click", () => {

@@ -19,7 +19,7 @@
             <ul>
 
                 <li class="active"><div class="home ">Home</div></li>
-            <li><div class="yourreports">your reports</li>
+            <!-- <li><div class="yourreports">your reports</li> -->
             <img id="notiimg" src="Screenshot 2025-12-14 152025.png" alt="">
             
             
@@ -60,27 +60,32 @@
   <div class="finder-form">
     <h3 class="foundthisitem">Found this item?</h3>
     <label>Your Name</label>
-    <input type="text" placeholder="Enter your name">
+    <input id="found-name" type="text" placeholder="Enter your name">
+     <p class="error-msg">Please enter your name.</p>
+
 
     <label>Contact</label>
-    <input type="text" placeholder="Enter phone or email">
+    <input id="found-contact" type="text" placeholder="Enter phone or email">
+     <p class="error-msg">Please enter your contact.</p>
 
     <label>Where did you find it?</label>
     <textarea class="infooffinder" placeholder="Location or description"></textarea>
+     <p class="error-msg">Please enter the location.</p>
 
     <label>date</label>
     <input type="date" id="lostDate" name="lostDate" required>
-
+     <p class="error-msg">Please enter the date.</p>
+     <p style="display: none;" class="submmited-msg">Details sent successfully!</p>
     <button id="foundBtn">Found It!</button>
-    <p class="submmited">Details sent successfully!</p>
+    
   </div>
 
 </div>
 
 
-    <script type="module" src="nav.js"></script>
-    <script type="module" src="Details.js"></script>
-
+    <script type="module" src="./nav.js"></script>
+    <script type="module" src="./Details.js"></script>
+    <script type="module" src="./foundit.js"></script>
 
 </body>
 </html>

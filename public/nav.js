@@ -2,7 +2,7 @@ const home = document.querySelector(".home");
 const yourreports = document.querySelector(".yourreports");
 const notiimg = document.querySelector("#notiimg");
 const pluslogo = document.querySelector("#pluslogo");
-
+const dot3 = document.querySelector("#dot3");
 
 
 
@@ -20,4 +20,12 @@ home?.addEventListener("click", () => {
 
 pluslogo?.addEventListener("click", () => {
   window.location.href = "report.html";
+});
+
+yourreports?.addEventListener("click", () => {
+  window.location.href = "myreports.html";
+});
+
+dot3?.addEventListener("click", () => {
+  window.location.href = "myreports.html";
 });

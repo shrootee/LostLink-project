@@ -183,7 +183,7 @@ nav ul {
 
 
 nav li {
-  margin: 0 60px;
+  margin: 0 30px;
 }
 
 nav li {
@@ -245,7 +245,7 @@ nav li.active {
     align-items: center;
     justify-content: flex-start;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     transition: 0.2s ease;
   
 }
